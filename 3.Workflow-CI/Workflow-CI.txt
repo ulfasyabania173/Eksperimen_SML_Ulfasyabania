@@ -1,0 +1,36 @@
+# Workflow-CI Eksperimen SML Ulfasyabania
+
+Repository: https://github.com/ulfasyabania173/Eksperimen_SML_Ulfasyabania
+
+## Penjelasan Tahapan di 3.Workflow-CI
+
+Folder `3.Workflow-CI` berisi pipeline otomatisasi untuk retraining dan deployment model machine learning berbasis MLflow Project. Struktur utamanya:
+
+- **MLProject/**
+  - `modelling.py`: Script training model RandomForest dengan MLflow autolog.
+  - `ionosphere_preprocessing.csv`: Dataset hasil preprocessing yang selalu disinkronkan dari folder model.
+  - `conda.yaml`: Spesifikasi environment untuk MLflow Project.
+  - `MLProject`: File konfigurasi MLflow Project agar bisa dijalankan via MLflow CLI atau workflow CI.
+
+Tahapan proses di folder ini:
+1. Dataset preprocessing terbaru disalin ke MLProject.
+2. Script `modelling.py` dijalankan untuk training model dan logging ke MLflow.
+3. Artefak model dan report disimpan di folder `mlruns/` dan file `classification_report.txt`.
+4. Semua proses ini dapat dijalankan otomatis via workflow CI.
+
+## Penjelasan .github/workflows/train_and_save_artifact.yml
+
+File workflow ini mengatur pipeline CI/CD di GitHub Actions:
+
+- **Trigger:**
+  - Setiap ada perubahan di folder `3.Workflow-CI/MLProject` atau dataset preprocessing, workflow otomatis berjalan.
+  - Bisa juga dijalankan manual via GitHub Actions (workflow_dispatch).
+
+- **Langkah utama:**
+  1. Checkout kode dari repository.
+  2. Setup environment Python 3.10.
+  3. Install dependencies dari `requirements.txt`.
+  4. Menjalankan script `modelling.py` untuk training model.
+  5. Meng-upload artefak hasil training (`mlruns/`, `classification_report.txt`) ke GitHub Actions artifacts.
+
+Hasil artefak dapat diunduh dari tab "Actions" di GitHub setelah workflow selesai.
