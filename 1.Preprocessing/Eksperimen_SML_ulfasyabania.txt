@@ -1,0 +1,36 @@
+Eksperimen SML ulfasyabania
+========================================
+
+Folder 1.Preprocessing berisi seluruh proses awal pengolahan data hingga siap digunakan untuk pemodelan machine learning. Berikut penjelasan setiap file dan alur kerjanya:
+
+1. ionosphere_raw.csv
+---------------------
+File data mentah hasil unduhan dari UCI Machine Learning Repository. Berisi 34 fitur numerik (Attribute1-Attribute34) dan 1 kolom target (Class: 'g' untuk good, 'b' untuk bad').
+
+2. Eksperimen_SML_Ulfasyabania.ipynb
+-------------------------------------
+Notebook utama yang mendokumentasikan seluruh tahapan eksplorasi dan preprocessing data, meliputi:
+  - Pengenalan dataset dan sumber data
+  - Analisis deskriptif (EDA): statistik, distribusi fitur, visualisasi, pengecekan missing values dan duplikat
+  - Encoding target (Class → ClassNum)
+  - Standarisasi fitur numerik
+  - Split data train/test
+  - Penyimpanan hasil preprocessing
+
+3. automate_ulfasyabania.py
+---------------------------
+Script Python otomatisasi preprocessing. Fungsi utamanya:
+  - Membaca file ionosphere_raw.csv
+  - Menghapus duplikat
+  - Meng-encode target ke numerik
+  - Standarisasi fitur numerik
+  - Menyimpan hasil ke ionosphere_preprocessing.csv
+Script ini memungkinkan proses preprocessing dijalankan ulang secara otomatis tanpa perlu menjalankan notebook manual.
+
+4. ionosphere_preprocessing.csv
+------------------------------
+File hasil akhir preprocessing. Berisi data yang sudah bersih, fitur ternormalisasi, dan target numerik, siap digunakan untuk training dan evaluasi model machine learning.
+
+Kesimpulan
+----------
+Seluruh proses di folder 1.Preprocessing memastikan data mentah diubah menjadi data siap latih secara sistematis dan terdokumentasi. Notebook digunakan untuk eksplorasi dan dokumentasi, sedangkan script automate_ulfasyabania.py untuk otomatisasi. Semua hasil akhir disimpan dalam ionosphere_preprocessing.csv.
