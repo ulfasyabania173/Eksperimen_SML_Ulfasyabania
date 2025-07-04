@@ -1,0 +1,53 @@
+artifact_path: mlflow-artifacts:/0/models/m-49e3ebd477b944669c6d1661900c96a7/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+is_signature_from_type_hint: false
+mlflow_version: 3.1.1
+model_id: m-49e3ebd477b944669c6d1661900c96a7
+model_size_bytes: 372789
+model_uuid: m-49e3ebd477b944669c6d1661900c96a7
+prompts: null
+run_id: ed5d3a01628246c5ac62056d815f7809
+signature:
+  inputs: '[{"type": "double", "name": "Attribute1", "required": true}, {"type": "double",
+    "name": "Attribute2", "required": true}, {"type": "double", "name": "Attribute3",
+    "required": true}, {"type": "double", "name": "Attribute4", "required": true},
+    {"type": "double", "name": "Attribute5", "required": true}, {"type": "double",
+    "name": "Attribute6", "required": true}, {"type": "double", "name": "Attribute7",
+    "required": true}, {"type": "double", "name": "Attribute8", "required": true},
+    {"type": "double", "name": "Attribute9", "required": true}, {"type": "double",
+    "name": "Attribute10", "required": true}, {"type": "double", "name": "Attribute11",
+    "required": true}, {"type": "double", "name": "Attribute12", "required": true},
+    {"type": "double", "name": "Attribute13", "required": true}, {"type": "double",
+    "name": "Attribute14", "required": true}, {"type": "double", "name": "Attribute15",
+    "required": true}, {"type": "double", "name": "Attribute16", "required": true},
+    {"type": "double", "name": "Attribute17", "required": true}, {"type": "double",
+    "name": "Attribute18", "required": true}, {"type": "double", "name": "Attribute19",
+    "required": true}, {"type": "double", "name": "Attribute20", "required": true},
+    {"type": "double", "name": "Attribute21", "required": true}, {"type": "double",
+    "name": "Attribute22", "required": true}, {"type": "double", "name": "Attribute23",
+    "required": true}, {"type": "double", "name": "Attribute24", "required": true},
+    {"type": "double", "name": "Attribute25", "required": true}, {"type": "double",
+    "name": "Attribute26", "required": true}, {"type": "double", "name": "Attribute27",
+    "required": true}, {"type": "double", "name": "Attribute28", "required": true},
+    {"type": "double", "name": "Attribute29", "required": true}, {"type": "double",
+    "name": "Attribute30", "required": true}, {"type": "double", "name": "Attribute31",
+    "required": true}, {"type": "double", "name": "Attribute32", "required": true},
+    {"type": "double", "name": "Attribute33", "required": true}, {"type": "double",
+    "name": "Attribute34", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-07-04 13:42:31.046911'

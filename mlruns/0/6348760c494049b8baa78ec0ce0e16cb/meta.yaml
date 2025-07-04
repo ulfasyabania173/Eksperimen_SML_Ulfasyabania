@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/6348760c494049b8baa78ec0ce0e16cb/artifacts
+end_time: 1751637531702
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6348760c494049b8baa78ec0ce0e16cb
+run_name: RandomForest_Tuning_Ionosphere
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751637425784
+status: 3
+tags: []
+user_id: Asus
